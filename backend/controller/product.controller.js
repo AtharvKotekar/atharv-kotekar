@@ -52,6 +52,6 @@ export const deleteProduct = async (req,res) => {
         res.status(200).json({success:true, message: "Product deleted succesfully"});
     } catch (error) {
         console.log("Error in deleting product : ", error.message);
-        res.status(404).json({success:false, message: "Product not found"});
+        res.status(500).json({success:false, message: "Internal server error"});
     }
 };
